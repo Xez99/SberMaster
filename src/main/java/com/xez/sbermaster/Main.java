@@ -8,6 +8,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Main класс
+ * @author xez
+ */
 public class Main extends Application {
     public static void main(String[] args) { launch(args); }
 
