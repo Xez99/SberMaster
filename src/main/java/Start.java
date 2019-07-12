@@ -1,5 +1,3 @@
-package com.xez.sbermaster;
-
 
 /**
  * Костыль для запуска Main класса
