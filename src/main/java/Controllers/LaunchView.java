@@ -23,15 +23,17 @@ public class LaunchView {
         FileChooser chooser = new FileChooser();
         chooser.setTitle("Открыть файл");
         chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV", "*.csv"));
-        File data = chooser.showOpenDialog(((Node)event.getSource()).getScene().getWindow());
-        if(data != null) {
+        File dataFile = chooser.showOpenDialog(((Node)event.getSource()).getScene().getWindow());
+        if(dataFile != null) {
             System.out.println("File opened");
-            System.out.println(data.getName());
+            System.out.println(dataFile.getName());
 
 
             Thread thread = new Thread( () -> {
-                InitData.parseCsv(data);
+                InitData.parseCsv(dataFile);
                 InitData.printCsv();
+                InitData.getInitData();
+                InitData.printInit();
             });
 
             thread.start();

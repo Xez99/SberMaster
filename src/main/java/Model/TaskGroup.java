@@ -11,7 +11,16 @@ public class TaskGroup {
     private int maxTime;
     private int completed;
 
-    TaskGroup(int id, String name, int squareMeters, int priority, int tasks, int activeTasks, float averageTime, int maxTime, int completed){
+    TaskGroup(
+            int id, String name,
+            int squareMeters,
+            int priority,
+            int tasks,
+            int activeTasks,
+            float averageTime,
+            int maxTime,
+            int completed
+    ){
         this.id = id;
         this.name = name;
         this.squareMeters = squareMeters;
